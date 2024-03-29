@@ -1,0 +1,1991 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+}
+nav {
+  height: 80px;
+  background: #ffffff;
+  box-shadow: 0px 0px 20.4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+label.logo {
+  padding: 0 4vw;
+}
+.logo img {
+  width: 10vw;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 30px;
+}
+nav ul li a {
+  display: flex;
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: inter;
+  /* padding: 7px 13px; */
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.act,
+a:hover {
+  color: #7500ff;
+  transition: 0.5s;
+}
+/* Navbar Button Book A Demo */
+.cssbuttons-io {
+  position: relative;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  border-radius: 0.8em;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: ghostwhite;
+  overflow: hidden;
+}
+.cssbuttons-io span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cssbuttons-io::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+  transform: scale(0.95);
+}
+.checkbtn {
+  font-size: 30px;
+  color: #7500ff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+/* navbar responsive */
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  .logo img {
+    width: 20vh;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  nav {
+    height: 9vh;
+  }
+}
+@media (max-width: 1055px) {
+  .logo img {
+    width: 25vh;
+  }
+  .checkbtn {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #1c0149;
+    top: 70px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 2;
+    padding: 0px 20px;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0px 20px;
+  }
+  a:hover,
+  a.active {
+    background-color: none;
+    color: rgb(152, 137, 218);
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media (max-width: 588px) {
+  .logo img {
+    float: left;
+    margin-top: 10px;
+    width: 5em;
+    height: 2.1em;
+  }
+}
+
+/* __________________________------------------___________________________ */
+
+.PLanView {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  width: 100%;
+  height: 7vh;
+  color: white;
+  text-transform: uppercase;
+}
+.headcontent {
+  /* background-color: rgba(153, 40, 40, 0.778); */
+
+  width: 25vw;
+  overflow: hidden;
+  height: 3vw;
+  text-align: center;
+}
+.copperPlanHead {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: #8c00ff;
+  color: transparent;
+  font-weight: 600;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+  -webkit-background-clip: text;
+  font-size: 2.5vw;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+.ftthPlanHead {
+  font-weight: 600;
+  font-family: "inter";
+  color: rgb(0, 0, 0);
+  background-color: #8c00ff;
+  color: transparent;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+  -webkit-background-clip: text;
+  font-size: 2.5vw;
+  /* transition: .5s;  */
+
+  text-transform: uppercase;
+}
+.Planselector {
+  text-transform: uppercase;
+  width: 100%;
+  height: 7vh;
+  display: flex;
+
+  font-size: 30px;
+  font-family: inter;
+  font-weight: 500;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.copper {
+  /* padding: 10px 0; */
+  cursor: pointer;
+  transition: 0.5s;
+  border-bottom: 3px solid #6200ff;
+}
+
+.copper:hover {
+  color: #8c00ff;
+}
+.ftth {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.ftth:hover {
+  color: #7802d8;
+}
+
+/* --------------------_________________________________--------------------- */
+
+.slider {
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  height: 77vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+.forButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 70%;
+  z-index: -10;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 20%;
+  height: 60vh;
+  box-shadow: 0px 0px 30px rgba(62, 63, 63, 0.589);
+  background-color: #fff;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.maincontent {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#next,
+#prev {
+  color: #6f00ff;
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+#next {
+  left: unset;
+  right: 400px;
+}
+/* _----_______________Circle_______________------ */
+.range {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes progress {
+  0% {
+    --percentage: 0;
+  }
+  100% {
+    --percentage: var(--value);
+  }
+}
+
+@property --percentage {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: rgba(108, 24, 206, 1);
+  --secondary: rgba(217, 217, 217, 1);
+  --size: 10vw;
+
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 2 / 1;
+  border-radius: 50% / 100% 100% 0 0;
+  position: relative;
+  /* border: 2px solid black; */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    from 0.75turn at 50% 100%,
+    var(--primary) calc(var(--percentage) * 1% / 2),
+    var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%)
+  );
+  mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 55.5%);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "Mbps";
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 8);
+  color: var(--primary);
+}
+.DULogo {
+  width: 100%;
+  height: 10vh;
+  color: #000000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 30px;
+}
+.Downloade {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 25%;
+}
+.Uploade {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 25%;
+  rotate: 180deg;
+}
+.pricediv {
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 27vh;
+  /* background-color: blue; */
+}
+.pricecontent {
+  width: 90%;
+  height: 25vh;
+  /* background-color: aqua; */
+}
+.Time {
+  font-family: inter;
+  /* background-color: yellow; */
+  width: 100%;
+  height: 6.2vh;
+  display: flex;
+  justify-content: center;
+}
+.price {
+  color: rgb(92, 31, 163);
+  font-weight: 600;
+  font-size: 1.6vw;
+  width: 50%;
+}
+.month {
+  display: flex;
+  justify-content: left;
+  font-size: 1vw;
+  font-weight: 400;
+  width: 30%;
+}
+.line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.line hr {
+  width: 90%;
+}
+.button {
+  /* background-color: aquamarine; */
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button button {
+  border: none;
+  color: white;
+  border-radius: 20px;
+  width: 70%;
+  font-size: 2ch;
+  height: 4.5vh;
+  cursor: pointer;
+  background-color: rgb(92, 31, 163);
+}
+
+/* [lan details popup */
+/* +++++++++++_______________________________________________________++++++++++++++++++++++++++++++ */
+/* PLAN DETAILS POP UP CSS */
+.PlanDetailsPopUp {
+  position: relative;
+  width: 100%;
+  height: 35vw;
+  /* background-color: #4a00e0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  display: none;
+  /* transition: 1s; */
+  z-index: 0;
+}
+
+.PlanDetailsPopUp .PopUp {
+  display: none;
+  width: 60%;
+  height: 30vw;
+  transition: 5s ease-out;
+  position: absolute;
+  border-radius: 1vw;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.288);
+}
+.AboutPlan {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+  font-size: 40px;
+  font-family: inter;
+  text-decoration: 0.2vw underline solid rgb(120, 2, 255);
+}
+.AboutText {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* padding-right: 2vw; */
+  width: 100%;
+  /* background-color: #8e2de2; */
+}
+.AboutContent {
+  /* background-color: #4a00e0; */
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AboutContent img {
+  width: 15vw;
+}
+.AboutContentText {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+}
+.AboutContentText ul {
+  font-size: 0.8vw;
+  font-weight: 600;
+  line-height: 2.4vw;
+  font-family: inter;
+  text-transform: capitalize;
+}
+.AboutContentText ul li {
+  padding: 0.01vw 0;
+}
+.AboutContentText .close {
+  padding: 0.5vw;
+  border-radius: 1vw;
+  border: 0;
+  background-color: #4a00e0;
+  color: #fff;
+  cursor: pointer;
+}
+.returntoplan {
+  padding: 2vw 0;
+}
+
+.return {
+  display: flex;
+  position: absolute;
+  right: 0;
+  padding: 1vw;
+  color: red;
+  cursor: pointer;
+  font-size: 1.5vw;
+  transition: 1s;
+}
+.return:hover {
+  rotate: 180deg;
+}
+/* _______________--------------------------_________________________ */
+
+/* ____________________________________-----------------_________________ */
+
+.ftthslider {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  height: 77vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.ftthforButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 70%;
+  z-index: -10;
+}
+.modified-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 20%;
+  height: 60vh;
+  box-shadow: 0px 0px 30px rgba(62, 63, 63, 0.589);
+  background-color: #fff;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.modified-maincontent {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#ftthprev,
+#ftthnext {
+  color: #6f00ff;
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+#modified-next {
+  left: unset;
+  right: 400px;
+}
+/* _----_______________Circle_______________------ */
+.modified-range {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes modified-progress {
+  0% {
+    --percentage: 0;
+  }
+  100% {
+    --percentage: var(--value);
+  }
+}
+
+@property --percentage {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: rgba(108, 24, 206, 1);
+  --secondary: rgba(217, 217, 217, 1);
+  --size: 10vw;
+
+  animation: modified-progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 2 / 1;
+  border-radius: 50% / 100% 100% 0 0;
+  position: relative;
+  /* border: 2px solid black; */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    from 0.75turn at 50% 100%,
+    var(--primary) calc(var(--percentage) * 1% / 2),
+    var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%)
+  );
+  mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 55.5%);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "Mbps";
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 8);
+  color: var(--primary);
+}
+.modified-DULogo {
+  width: 100%;
+  height: 10vh;
+  color: #000000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 30px;
+}
+.modified-Downloade {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 25%;
+}
+.modified-Uploade {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 25%;
+  rotate: 180deg;
+}
+.modified-pricediv {
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 27vh;
+  /* background-color: blue; */
+}
+.modified-pricecontent {
+  width: 90%;
+  height: 25vh;
+  /* background-color: aqua; */
+}
+.modified-Time {
+  font-family: inter;
+  /* background-color: yellow; */
+  width: 100%;
+  height: 6.2vh;
+  display: flex;
+  justify-content: center;
+}
+.modified-price {
+  color: rgb(92, 31, 163);
+  font-weight: 600;
+  font-size: 1.6vw;
+  width: 50%;
+}
+.modified-month {
+  display: flex;
+  justify-content: left;
+  font-size: 1vw;
+  font-weight: 400;
+  width: 30%;
+}
+.modified-line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.modified-line hr {
+  width: 90%;
+}
+.modified-button {
+  /* background-color: aquamarine; */
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modified-button button {
+  border: none;
+  color: white;
+  border-radius: 20px;
+  width: 70%;
+  font-size: 2ch;
+  height: 4.5vh;
+  cursor: pointer;
+  background-color: rgb(92, 31, 163);
+}
+
+
+/* POPUP FTTH */
+.modified_PlanDetailsPopUp {
+  position: relative;
+  width: 100%;
+  height: 35vw;
+  /* background-color: #4a00e0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  display: none;
+  /* transition: 1s; */
+  z-index: 0;
+}
+
+.modified_PlanDetailsPopUp .modified_PopUp {
+  display: none;
+  width: 60%;
+  height: 30vw;
+  transition: 5s ease-out;
+  position: absolute;
+  border-radius: 1vw;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.288);
+}
+.modified_AboutPlan {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+  font-size: 40px;
+  font-family: inter;
+  text-decoration: 0.2vw underline solid rgb(120, 2, 255);
+}
+.modified_AboutText {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* padding-right: 2vw; */
+  width: 100%;
+  /* background-color: #8e2de2; */
+}
+.modified_AboutContent {
+  /* background-color: #4a00e0; */
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modified_AboutContent img {
+  width: 15vw;
+}
+.modified_AboutContentText {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+}
+.modified_AboutContentText ul {
+  font-size: 0.8vw;
+  font-weight: 600;
+  line-height: 2.4vw;
+  font-family: inter;
+  text-transform: capitalize;
+}
+.modified_AboutContentText ul li {
+  padding: 0.01vw 0;
+}
+.modified_AboutContentText .close {
+  padding: 0.5vw;
+  border-radius: 1vw;
+  border: 0;
+  background-color: #4a00e0;
+  color: #fff;
+  cursor: pointer;
+}
+.modified_returntoplan {
+  padding: 2vw 0;
+}
+
+.modified_return {
+  display: flex;
+  position: absolute;
+  right: 0;
+  padding: 1vw;
+  color: red;
+  cursor: pointer;
+  font-size: 1.5vw;
+  transition: 1s;
+}
+.modified_return:hover {
+  rotate: 180deg;
+}
+
+
+/*  ______________________________________________________________________________ */
+
+
+@media (max-width: 1400px) {
+  .slider {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .forButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 70%;
+    z-index: -10;
+  }
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 25vw;
+    height: 60vh;
+    box-shadow: 0px 0px 30px rgba(62, 63, 63, 0.589);
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+  .maincontent {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  #next,
+  #prev {
+    color: #6f00ff;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #next {
+    left: unset;
+    right: 400px;
+  }
+  /* _----_______________Circle_______________------ */
+  .range {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @keyframes progress {
+    0% {
+      --percentage: 0;
+    }
+    100% {
+      --percentage: var(--value);
+    }
+  }
+
+  @property --percentage {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+
+  [role="progressbar"] {
+    --percentage: var(--value);
+    --primary: rgba(108, 24, 206, 1);
+    --secondary: rgba(217, 217, 217, 1);
+    --size: 15vw;
+
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 2 / 1;
+    border-radius: 50% / 100% 100% 0 0;
+    position: relative;
+    /* border: 2px solid black; */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  [role="progressbar"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+      from 0.75turn at 50% 100%,
+      var(--primary) calc(var(--percentage) * 1% / 2),
+      var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%)
+    );
+    mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 55.5%);
+    -webkit-mask-mode: alpha;
+  }
+
+  [role="progressbar"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) "Mbps";
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 8);
+    color: var(--primary);
+  }
+  .DULogo {
+    width: 100%;
+    height: 10vh;
+    color: #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+  }
+  .Downloade {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 25%;
+  }
+  .Uploade {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 25%;
+    rotate: 180deg;
+  }
+  .pricediv {
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 26vh;
+    /* background-color: blue; */
+  }
+  .pricecontent {
+    width: 100%;
+    height: 25vh;
+    text-align: center;
+
+    /* background-color: aqua; */
+  }
+  .Time {
+    font-family: inter;
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+    width: 100%;
+    height: 6.2vh;
+  }
+  .price {
+    color: rgb(92, 31, 163);
+    font-weight: 700;
+    width: 30%;
+  }
+  .month {
+    display: flex;
+    justify-content: left;
+    /* font-size: 10px; */
+    font-weight: 500;
+  }
+  .line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .line hr {
+    width: 90%;
+  }
+  .button {
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button button {
+    border: none;
+    color: white;
+    border-radius: 20px;
+    width: 70%;
+    font-size: 2ch;
+    height: 4.5vh;
+    background-color: rgb(92, 31, 163);
+  }
+}
+
+/* _______________________-------------------------_______________________________________ */
+
+@media (max-width: 900px) {
+  .PLanView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    width: 100%;
+    height: 10vh;
+    color: white;
+    text-transform: uppercase;
+  }
+  .headcontent {
+    /* background-color: rgba(153, 40, 40, 0.986); */
+
+    width: 60vw;
+    overflow: hidden;
+    height: 9vw;
+    text-align: center;
+  }
+  .copperPlanHead {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #8c00ff;
+    color: transparent;
+    font-weight: 600;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+    -webkit-background-clip: text;
+    font-size: 7vw;
+
+    text-transform: uppercase;
+  }
+  .ftthPlanHead {
+    font-weight: 600;
+    font-family: "inter";
+    color: rgb(0, 0, 0);
+    background-color: #8c00ff;
+    color: transparent;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+    -webkit-background-clip: text;
+    font-size: 7vw;
+    text-transform: uppercase;
+  }
+  .Planselector {
+    text-transform: uppercase;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: inter;
+    font-weight: 500;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .copper {
+    /* padding: 10px 0; */
+    cursor: pointer;
+    /* border-bottom: 3px solid #6200ff; */
+  }
+
+  .ftth {
+    /* padding: 10px 0; */
+    cursor: pointer;
+    /* border-bottom: 3px solid #6200ff; */
+  }
+
+  .slider {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .forButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+    /* z-index: -10; */
+  }
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70vw;
+    height: 57vh;
+    box-shadow: 0px 0px 30px rgba(62, 63, 63, 0.589);
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+  .maincontent {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  #next,
+  #prev {
+    color: #6f00ff;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #next {
+    left: unset;
+    right: 400px;
+  }
+  /* _----_______________Circle_______________------ */
+  .range {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @keyframes progress {
+    0% {
+      --percentage: 0;
+    }
+    100% {
+      --percentage: var(--value);
+    }
+  }
+
+  @property --percentage {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+
+  [role="progressbar"] {
+    --percentage: var(--value);
+    --primary: rgba(108, 24, 206, 1);
+    --secondary: rgba(217, 217, 217, 1);
+    --size: 40vw;
+
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 2 / 1;
+    border-radius: 50% / 100% 100% 0 0;
+    position: relative;
+    /* border: 2px solid black; */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  [role="progressbar"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+      from 0.75turn at 50% 100%,
+      var(--primary) calc(var(--percentage) * 1% / 2),
+      var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%)
+    );
+    mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 55.5%);
+    -webkit-mask-mode: alpha;
+  }
+
+  [role="progressbar"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) "Mbps";
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 8);
+    color: var(--primary);
+  }
+  .DULogo {
+    width: 100%;
+    height: 10vh;
+    color: #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+  }
+  .Downloade {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 25%;
+  }
+  .Uploade {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 25%;
+    rotate: 180deg;
+  }
+  .pricediv {
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    /* background-color: blue; */
+  }
+  .pricecontent {
+    width: 90%;
+    height: 90%;
+    /* background-color: aqua; */
+  }
+  .Time {
+    font-family: inter;
+    /* background-color: yellow; */
+    width: 100%;
+    height: 6.2vh;
+    display: flex;
+    justify-content: center;
+  }
+  .price {
+    color: rgb(92, 31, 163);
+    font-weight: 700;
+    font-size: 25px;
+    width: 50%;
+  }
+  .month {
+    display: flex;
+    justify-content: left;
+    font-size: 10px;
+    font-weight: 500;
+    width: 30%;
+  }
+  .line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .line hr {
+    width: 90%;
+  }
+  .button {
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button button {
+    border: none;
+    color: white;
+    border-radius: 20px;
+    width: 70%;
+    font-size: 2ch;
+    height: 4.5vh;
+    background-color: rgb(92, 31, 163);
+  }
+  .PlanDetailsPopUp {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    /* background-color: #4a00e0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    display: none;
+    /* transition: 1s; */
+    z-index: 0;
+  }
+
+  .PlanDetailsPopUp .PopUp {
+    display: none;
+    width: 80%;
+    height: 65vh;
+    transition: 5s ease-out;
+    position: absolute;
+    border-radius: 1vw;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.288);
+  }
+  .AboutPlan {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    font-size: 20px;
+    font-family: inter;
+    text-decoration: 0.2vw underline solid rgb(120, 2, 255);
+  }
+  .AboutText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* padding-right: 2vw; */
+    width: 100%;
+    /* background-color: #8e2de2; */
+  }
+  .AboutContent {
+    display: none;
+    /* background-color: #4a00e0; */
+  }
+  .AboutContent img {
+    display: none;
+  }
+
+  .AboutContentText {
+    padding: 10px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
+  .AboutContentText ul {
+    font-size: 3vw;
+    font-weight: 500;
+    line-height: 4.5vw;
+    font-family: inter;
+    text-transform: capitalize;
+  }
+  .AboutContentText ul li {
+    padding: 1vw 0;
+  }
+  .AboutContentText .close {
+    padding: 0.5vw;
+    border-radius: 1vw;
+    border: 0;
+    background-color: #4a00e0;
+    color: #fff;
+    cursor: pointer;
+  }
+  .returntoplan {
+    padding: 2vw 0;
+  }
+
+  .return {
+    display: flex;
+    position: absolute;
+    right: 0;
+    padding: 1vw;
+    color: red;
+    cursor: pointer;
+    font-size: 4vw;
+    /* transition: 1s; */
+  }
+  .return:hover {
+    rotate: 180deg;
+  }
+}
+
+/* _______________________---_-------FTTH MEDIA QUERY ----------_______________ */
+
+@media (max-width: 1400px) {
+  .modified-slider {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modified-forButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 70%;
+    z-index: -10;
+  }
+  .modified-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 25vw;
+    height: 60vh;
+    box-shadow: 0px 0px 30px rgba(62, 63, 63, 0.589);
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+  .modified-maincontent {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  #modified-next,
+  #modified-prev {
+    color: #6f00ff;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #modified-next {
+    left: unset;
+    right: 400px;
+  }
+  /* _----_______________Circle_______________------ */
+  .modified-range {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @keyframes modified-progress {
+    0% {
+      --percentage: 0;
+    }
+    100% {
+      --percentage: var(--value);
+    }
+  }
+
+  @property --percentage {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+
+  [role="progressbar"] {
+    --percentage: var(--value);
+    --primary: rgba(108, 24, 206, 1);
+    --secondary: rgba(217, 217, 217, 1);
+    --size: 15vw;
+
+    animation: modified-progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 2 / 1;
+    border-radius: 50% / 100% 100% 0 0;
+    position: relative;
+    /* border: 2px solid black; */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  [role="progressbar"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+      from 0.75turn at 50% 100%,
+      var(--primary) calc(var(--percentage) * 1% / 2),
+      var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%)
+    );
+    mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 55.5%);
+    -webkit-mask-mode: alpha;
+  }
+
+  [role="progressbar"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) "Mbps";
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 8);
+    color: var(--primary);
+  }
+  .modified-DULogo {
+    width: 100%;
+    height: 10vh;
+    color: #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+  }
+  .modified-Downloade {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 25%;
+  }
+  .modified-Uploade {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 25%;
+    rotate: 180deg;
+  }
+  .modified-pricediv {
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 26vh;
+    /* background-color: blue; */
+  }
+  .modified-pricecontent {
+    width: 100%;
+    height: 25vh;
+    text-align: center;
+
+    /* background-color: aqua; */
+  }
+  .modified-Time {
+    font-family: inter;
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+    width: 100%;
+    height: 6.2vh;
+  }
+  .modified-price {
+    color: rgb(92, 31, 163);
+    font-weight: 700;
+    width: 30%;
+  }
+  .modified-month {
+    display: flex;
+    justify-content: left;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .modified-line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .modified-line hr {
+    width: 90%;
+  }
+  .modified-button {
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modified-button button {
+    border: none;
+    color: white;
+    border-radius: 20px;
+    width: 70%;
+    font-size: 2ch;
+    height: 4.5vh;
+    background-color: rgb(92, 31, 163);
+  }
+}
+
+/* _______________________-------------------------_______________________________________ */
+
+@media (max-width: 900px) {
+  .modified-PLanView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    width: 100%;
+    height: 7vh;
+    color: white;
+    text-transform: uppercase;
+  }
+  .modified-copperPlanHead {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #8c00ff;
+    color: transparent;
+    font-weight: 600;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.548);
+    -webkit-background-clip: text;
+    font-size: 10vw;
+
+    text-transform: uppercase;
+  }
+  .modified-ftthPlanHead {
+    font-weight: 600;
+    font-family: "inter";
+    color: rgb(0, 0, 0);
+    background-color: #8c00ff;
+    color: transparent;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.548);
+    -webkit-background-clip: text;
+    font-size: 2.5vw;
+
+    text-transform: uppercase;
+    display: none;
+  }
+  .modified-Planselector {
+    text-transform: uppercase;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: inter;
+    font-weight: 500;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .modified-copper {
+    /* padding: 10px 0; */
+    cursor: pointer;
+    /* border-bottom: 3px solid #6200ff; */
+  }
+  .modified-copper::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #6200ff;
+    position: absolute;
+    top: 46vw;
+    left: 11vw;
+    transition: 1s;
+    display: none;
+  }
+  .modified-copper:hover::after {
+    width: 37vw;
+  }
+  .modified-ftth {
+    /* padding: 10px 0; */
+    cursor: pointer;
+    /* border-bottom: 3px solid #6200ff; */
+  }
+  .modified-ftth::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #6200ff;
+    position: absolute;
+    top: 46vw;
+    right: 11.5vw;
+    transition: 1s;
+    display: none;
+  }
+  .modified-ftth:hover::after {
+    width: 30vw;
+  }
+
+  .modified-slider {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ftthforButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+    /* z-index: -10; */
+  }
+  .modified-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70vw;
+    height: 57vh;
+    box-shadow: 0px 0px 30px rgba(62, 63, 63, 0.589);
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+  .modified-maincontent {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  #modified-next,
+  #modified-prev {
+    color: #6f00ff;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #modified-next {
+    left: unset;
+    right: 400px;
+  }
+  /* _----_______________Circle_______________------ */
+  .modified-range {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @keyframes modified-progress {
+    0% {
+      --percentage: 0;
+    }
+    100% {
+      --percentage: var(--value);
+    }
+  }
+
+  @property --percentage {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+
+  [role="progressbar"] {
+    --percentage: var(--value);
+    --primary: rgba(108, 24, 206, 1);
+    --secondary: rgba(217, 217, 217, 1);
+    --size: 40vw;
+
+    animation: modified-progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 2 / 1;
+    border-radius: 50% / 100% 100% 0 0;
+    position: relative;
+    /* border: 2px solid black; */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  [role="progressbar"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+      from 0.75turn at 50% 100%,
+      var(--primary) calc(var(--percentage) * 1% / 2),
+      var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%)
+    );
+    mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 55.5%);
+    -webkit-mask-mode: alpha;
+  }
+
+  [role="progressbar"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) "Mbps";
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 8);
+    color: var(--primary);
+  }
+  .modified-DULogo {
+    width: 100%;
+    height: 10vh;
+    color: #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+  }
+  .modified-Downloade {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 25%;
+  }
+  .modified-Uploade {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 25%;
+    rotate: 180deg;
+  }
+  .modified-pricediv {
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    /* background-color: blue; */
+  }
+  .modified-pricecontent {
+    width: 90%;
+    height: 90%;
+    /* background-color: aqua; */
+  }
+  .modified-Time {
+    font-family: inter;
+    /* background-color: yellow; */
+    width: 100%;
+    height: 6.2vh;
+    display: flex;
+    justify-content: center;
+  }
+  .modified-price {
+    color: rgb(92, 31, 163);
+    font-weight: 700;
+    font-size: 25px;
+    width: 50%;
+  }
+  .modified-month {
+    display: flex;
+    justify-content: left;
+    font-size: 10px;
+    font-weight: 500;
+    width: 30%;
+  }
+  .modified-line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .modified-line hr {
+    width: 90%;
+  }
+  .modified-button {
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modified-button button {
+    border: none;
+    color: white;
+    border-radius: 20px;
+    width: 70%;
+    font-size: 2ch;
+    height: 4.5vh;
+    background-color: rgb(92, 31, 163);
+  }
+  .modified_PlanDetailsPopUp {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    /* background-color: #4a00e0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    display: none;
+    /* transition: 1s; */
+    z-index: 0;
+  }
+
+  .modified_PlanDetailsPopUp .modified_PopUp {
+    display: none;
+    width: 80%;
+    height: 65vh;
+    transition: 5s ease-out;
+    position: absolute;
+    border-radius: 1vw;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.288);
+  }
+  .modified_AboutPlan {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    font-size: 20px;
+    font-family: inter;
+    text-decoration: 0.2vw underline solid rgb(120, 2, 255);
+  }
+  .modified_AboutText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* padding-right: 2vw; */
+    width: 100%;
+    /* background-color: #8e2de2; */
+  }
+  .modified_AboutContent {
+    display: none;
+    /* background-color: #4a00e0; */
+  }
+  .modified_AboutContent img {
+    display: none;
+  }
+
+  .modified_AboutContentText {
+    padding: 10px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
+  .modified_AboutContentText ul {
+    font-size: 3vw;
+    font-weight: 500;
+    line-height: 4.5vw;
+    font-family: inter;
+    text-transform: capitalize;
+  }
+  .modified_AboutContentText ul li {
+    padding: 1vw 0;
+  }
+  .modified_AboutContentText .close {
+    padding: 0.5vw;
+    border-radius: 1vw;
+    border: 0;
+    background-color: #4a00e0;
+    color: #fff;
+    cursor: pointer;
+  }
+  .modified_returntoplan {
+    padding: 2vw 0;
+  }
+
+  .modified_return {
+    display: flex;
+    position: absolute;
+    right: 0;
+    padding: 1vw;
+    color: red;
+    cursor: pointer;
+    font-size: 4vw;
+    /* transition: 1s; */
+  }
+  .modified_return:hover {
+    rotate: 180deg;
+  }
+}
